@@ -1,4 +1,4 @@
-CREATE TABLE music_table (
+CREATE TABLE If NOT EXISTS music_table (
     id INT AUTO_INCREMENT PRIMARY KEY,
     track_name VARCHAR(255),
     artists_name VARCHAR(255),

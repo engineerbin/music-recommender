@@ -1,0 +1,83 @@
+<!-- recommend/templates/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Recommender</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Music Recommender</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Track Name</th>
+                <th>Artist Name</th>
+                <th>Artist Count</th>
+                <th>Released Year</th>
+                <th>Released Month</th>
+                <th>Released Day</th>
+                <th>In Spotify Playlists</th>
+                <th>In Spotify Charts</th>
+                <th>Streams</th>
+                <th>In Apple Playlists</th>
+                <th>In Apple Charts</th>
+                <th>In Deezer Playlists</th>
+                <th>In Deezer Charts</th>
+                <th>In Shazam Charts</th>
+                <th>BPM</th>
+                <th>Key</th>
+                <th>Mode</th>
+                <th>Danceability</th>
+                <th>Valence</th>
+                <th>Energy</th>
+                <th>Acousticness</th>
+                <th>Instrumentalness</th>
+                <th>Liveness</th>
+                <th>Speechiness</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for music in music_list %}
+            <tr>
+                <td>{{ music.track_name }}</td>
+                <td>{{ music.artists_name }}</td>
+                <td>{{ music.artist_count }}</td>
+                <td>{{ music.released_year }}</td>
+                <td>{{ music.released_month }}</td>
+                <td>{{ music.released_day }}</td>
+                <td>{{ music.in_spotify_playlists }}</td>
+                <td>{{ music.in_spotify_charts }}</td>
+                <td>{{ music.streams }}</td>
+                <td>{{ music.in_apple_playlists }}</td>
+                <td>{{ music.in_apple_charts }}</td>
+                <td>{{ music.in_deezer_playlists }}</td>
+                <td>{{ music.in_deezer_charts }}</td>
+                <td>{{ music.in_shazam_charts }}</td>
+                <td>{{ music.bpm }}</td>
+                <td>{{ music.key_name }}</td>
+                <td>{{ music.mode }}</td>
+                <td>{{ music.danceability }}</td>
+                <td>{{ music.valence }}</td>
+                <td>{{ music.energy }}</td>
+                <td>{{ music.acousticness }}</td>
+                <td>{{ music.instrumentalness }}</td>
+                <td>{{ music.liveness }}</td>
+                <td>{{ music.speechiness }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
